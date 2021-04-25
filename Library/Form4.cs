@@ -45,6 +45,29 @@ namespace Library
                 roles.Text = Library.getRoles(listUsers.Items[listUsers.SelectedIndex].ToString());
             };
 
+            //TextBox for type role
+            TextBox role = new TextBox();
+            role.Width = 255;
+            role.Height = 44;
+            role.Location = new Point(260, (12 * 2) + roles.Height);
+            this.Controls.Add(role);
+
+            //Button for add role
+            Button addRole = new Button();
+            addRole.Text = "Добавить роль";
+            addRole.Width = 95;
+            addRole.Height = 44;
+            addRole.Location = new Point(260 + role.Width, (12 * 2) + roles.Height);
+            this.Controls.Add(addRole);
+
+            //Button for delete role
+            Button deleteRole = new Button();
+            deleteRole.Text = "Убрать роль";
+            deleteRole.Width = 95;
+            deleteRole.Height = 44;
+            deleteRole.Location = new Point(260 + role.Width, (12 * 2) + roles.Height + addRole.Height);
+            this.Controls.Add(deleteRole);
+
             //Button to previos page
             Button btn1 = new Button();
             btn1.Text = "Назад";
